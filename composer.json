@@ -6,16 +6,21 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "barryvdh/laravel-cors": "^0.11.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "noh4ck/graphiql": "@dev",
+        "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~6.0",
-        "symfony/thanks": "^1.0"
+        "symfony/thanks": "^1.0",
+        "webonyx/graphql-php": "^0.10.0",
+        "rebing/graphql-laravel": "~1.7"
     },
     "autoload": {
         "classmap": [
@@ -33,8 +38,12 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+            }
         }
     },
     "scripts": {

@@ -177,6 +177,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Rebing\GraphQL\GraphQLServiceProvider::class,
+
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+
+        Graphiql\GraphiqlServiceProvider::class
+
     ],
 
     /*
@@ -226,6 +232,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'GraphQL' => Rebing\GraphQL\Support\Facades\GraphQL::class,
+
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class
     ],
 
 ];
