@@ -92,10 +92,10 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                'example_query' => ExampleQuery::class,
+                'users' => 'App\GraphQL\Query\UsersQuery'
             ],
             'mutation' => [
-                'example_mutation'  => ExampleMutation::class,
+                
             ],
             'middleware' => []
         ],
@@ -111,8 +111,7 @@ return [
     // ]
     //
     'types' => [
-        'example'           => ExampleType::class,
-        'relation_example'  => ExampleRelationType::class,
+        'user' => 'App\GraphQL\Type\UserType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.
